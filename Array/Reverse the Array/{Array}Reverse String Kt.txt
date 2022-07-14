@@ -1,0 +1,37 @@
+import java.util.Scanner
+
+fun main() {
+    var userArray = arrayListOf<Int?>()
+    var reverseArray = arrayListOf<Int?>()
+    val reader = Scanner(System.`in`)
+    for (i in  1..6)
+    {
+        userArray.add(Integer.valueOf(readLine()))
+    }
+
+    println(userArray)
+
+//    The Default One..
+//    userArray.reverse() 
+    
+    // The HandWritten Process
+    reverseArray = rev(userArray,0,5)
+
+    println(reverseArray)
+}
+fun rev(willChangeArrayList:java.util.ArrayList<Int?>,start:Int,end:Int): ArrayList<Int?> {
+    
+
+    var temp:Int
+    var Start= start
+    var End = end
+    while (Start<End)
+    {
+        temp = willChangeArrayList[start]!!
+        willChangeArrayList[start] = willChangeArrayList[end]
+        willChangeArrayList[end] = temp
+        Start++
+        End--
+    }
+    return willChangeArrayList
+}
