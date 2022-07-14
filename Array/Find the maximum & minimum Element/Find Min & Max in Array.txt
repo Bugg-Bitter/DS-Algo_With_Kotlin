@@ -1,0 +1,47 @@
+import java.util.Scanner
+
+fun main() {
+    var userArray = arrayListOf<Int?>()
+    var max:Int?
+    var min:Int?
+    var size:Int = 6
+
+    val reader = Scanner(System.`in`)
+    for (i in 0..size) {
+        userArray.add(Integer.valueOf(readLine()))
+    }
+    max = maxEleArray(userArray,size)
+    min = minEleArray(userArray,size)
+    println("Max = $max")
+    println("Min = $min")
+}
+fun maxEleArray(array: ArrayList<Int?>,size:Int): Int? {
+    var max:Int? = 0
+    for (i in 0..size)
+    {
+        if (array[i]!! > max!!){
+            max = array[i]
+        }
+    }
+    return max
+}
+
+fun minEleArray(array: ArrayList<Int?>,size:Int): Int? {
+    var min:Int? = 0
+    for (i in 0..size)
+    {
+        if (array[i]!! < min!!){
+            min = array[i]
+        }
+    }
+    return min
+}
+
+/*
+
+    Time Complexity = O(n) // depends on size of n with linear iteration
+    Space Complexity = O(1) // cause no extra space needed
+
+    Worst Case : 1 + 2 (n-2)
+    Best Case : 1 + n - 2
+*/
