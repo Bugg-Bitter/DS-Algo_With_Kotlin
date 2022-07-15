@@ -1,0 +1,18 @@
+// Que: Find the Kth max and min element of an array
+// [7,10,4,3,20,15] from this if k = 3 than ans will be [7]
+
+fun main() {
+    val userArray:ArrayList<Int> = arrayListOf(7,10,4,3,20,15)
+    var size = userArray.size
+    var first: Int? = null
+    var sec: Int? = null
+    var target: Int = 3
+    var ans = KthElement(userArray,target)
+    println(ans)
+}
+
+// Sort the Array and search the array by [ target - 1 ] ....
+fun KthElement(userArray: ArrayList<Int>, target: Int): Int{
+    userArray.sort()
+    return userArray[target-1]
+}
