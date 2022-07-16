@@ -22,7 +22,7 @@ fun mvNegSide(array:ArrayList<Int>):ArrayList<Int>{
             array[i] = tempList[0]
             array[pivot] = tempList[1]
         }
-    }
+    } 
     return array
 
 }
