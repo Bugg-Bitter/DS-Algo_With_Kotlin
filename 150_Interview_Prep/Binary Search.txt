@@ -1,0 +1,63 @@
+import kotlin.math.round
+
+// Que: Binary Search !! search 33 in the array
+// Given Array : [0,1,21,33,45,45,61,71,72,73]
+
+fun main() {
+    val userArray:ArrayList<Int> = arrayListOf(0,1,21,33,45,45,61,71,72,73)
+    val target:Int = 72
+//    var ans = BReSort(userArray,target,0,userArray.size-1,0)
+//    println(ans)
+//    println("Found at index = ${ans[0]}\nTotal Iterations are = ${ans[1]}")
+}
+
+
+/// Normal Iterative Way ...
+//fun Bsort(array:ArrayList<Int>,target:Int):ArrayList<Int>{
+//    var left = 0
+//    var right = array.size - 1
+//    var mid = 0
+//    var totalPerform = 0
+////    array.sort()
+//    var storedArray:ArrayList<Int> = arrayListOf(0,0)
+//    while (left <= right){
+//        mid = round((((left+right) / 2).toDouble())).toInt()
+//        totalPerform++
+//        if(array[mid] < target) {
+//            left = mid + 1
+//        } else if(array[mid] > target){
+//            right = mid - 1
+//        } else if(target == array[mid]){
+//            storedArray[0] = mid
+//            storedArray[1] = totalPerform
+//            return storedArray
+//        }
+//    }
+//    return storedArray;
+//}
+
+
+
+/// Recursive Way
+// Time Complexity :
+// Space Complexity :
+//fun BReSort(array:ArrayList<Int>,target:Int,left:Int,right:Int,total:Int):ArrayList<Int>{
+//
+//    var mid = 0
+//    var totalPerform = total
+//    var storedArray:ArrayList<Int> = arrayListOf(0,0)
+//    mid = round((((left+right) / 2).toDouble())).toInt()
+//
+//    if (left > right){
+//        return storedArray
+//    } else if(target == array[mid]){
+//        storedArray[0] = mid
+//        storedArray[1] = totalPerform
+//        return storedArray
+//    } else if(target < array[mid]){
+//        return BReSort(array,target,left,mid-1,++totalPerform)
+//    } else if(target > array[mid]){
+//        return BReSort(array,target,mid+1,right,++totalPerform)
+//    }
+//    return storedArray
+//}
