@@ -1,0 +1,44 @@
+// Que: Sort the 0s, 1s, 2s array ascending order without using a sorting algorithm !!
+// Given Array : [0,1,2,0,1,2]
+// After sort : [0,0,1,1,2,2]
+
+fun main() {
+    val userArray:ArrayList<Int> = arrayListOf(0,1,2,0,1,2)
+    var ans = NFD(userArray)
+    println(ans)
+}
+
+fun NFD(array:ArrayList<Int>):ArrayList<Int>{
+    var left = 0
+    var mid = 0
+    var right = array.size - 1
+    var leftMidArray: ArrayList<Int>
+    var midRightArray: ArrayList<Int>
+
+    while (mid <= right){
+        println(array)
+        if (array[mid] == 0) {
+            leftMidArray = swap(array[left] ,array[mid])
+            array[left] = leftMidArray[0]
+            array[mid] = leftMidArray[1]
+            left++
+            mid++
+        }else if(array[mid] == 1){
+            mid ++
+        }else if(array[mid] == 2){
+            midRightArray = swap(array[mid],array[right])
+            array[mid] = midRightArray[0]
+            array[right] = midRightArray[1]
+            right--
+        }
+    }
+    return array;
+}
+
+
+fun swap(first:Int,sec:Int): ArrayList<Int> {
+    var changeableList:ArrayList<Int> = arrayListOf(0,0)
+    changeableList[0] = sec
+    changeableList[1] = first
+    return changeableList
+}

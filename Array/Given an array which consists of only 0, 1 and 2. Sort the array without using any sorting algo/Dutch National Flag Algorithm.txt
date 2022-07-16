@@ -1,0 +1,87 @@
+🇵🇾 Dutch National Flag algorithm is like it's hide in its flag color !!
+
+A Dutch Flag has 3 Colors :
+Red , white , Blue
+
+Similarly, our algorithm has 3 digits !
+0 , 1, 2
+
+Suppose we have an array of 0,1,2
+Like this : [0,2,1,0,1,1,2]
+
+So we can now sort using 2 ways of this array :
+
+1 ) Call any library to sort or using other sorting algorithms like : merge sort, quick sort, heap sort etc..
+
+2 ) DNF Algorithm !! Which we see here ..
+
+Let's explore ...
+
+First we have array [0,2,1,0,1,1,2]
+
+So we have only 3 types of number here ,
+
+0 , 1 , 2
+
+And we will start with 3 pointers under 1 mother and 3 sub conditions ...
+Pointers will be : 
+
+left Mid Right
+
+1 mother condition will be : mid <= right 
+
+3 sub conditions will be : 
+
+1) array[mid] == 0 {
+	swap(array[left],array[mid])
+	left++
+	mid++
+ }
+
+
+2) array[mid] == 1 {
+	mid++
+ }
+
+
+3) array[mid] == 2 {
+	swap(array[mid],array[right])
+	right--
+ }
+
+So final code will be like in Kotlin :
+
+fun NFD(array:ArrayList<Int>):ArrayList<Int>{
+    var left = 0
+    var mid = 0
+    var right = array.size - 1
+    var leftMidArray: ArrayList<Int>
+    var midRightArray: ArrayList<Int>
+
+    while (mid <= right){
+        println(array)
+        if (array[mid] == 0) {
+            leftMidArray = swap(array[left] ,array[mid])
+            array[left] = leftMidArray[0]
+            array[mid] = leftMidArray[1]
+            left++
+            mid++
+        }else if(array[mid] == 1){
+            mid ++
+        }else if(array[mid] == 2){
+            midRightArray = swap(array[mid],array[right])
+            array[mid] = midRightArray[0]
+            array[right] = midRightArray[1]
+            right--
+        }
+    }
+    return array;
+}
+
+
+fun swap(first:Int,sec:Int): ArrayList<Int> {
+    var changeableList:ArrayList<Int> = arrayListOf(0,0)
+    changeableList[0] = sec
+    changeableList[1] = first
+    return changeableList
+}
