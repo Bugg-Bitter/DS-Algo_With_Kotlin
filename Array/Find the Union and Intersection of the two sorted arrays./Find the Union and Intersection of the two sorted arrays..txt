@@ -1,0 +1,68 @@
+// Que: Find the Union and Intersection of the two sorted arrays.
+// Given Array 1: [1,2,3,4,5]
+// Given Array 2: [1,2,3]
+
+// Union ans : 5
+// Intersect ans : 3
+
+fun main() {
+    val urArray:ArrayList<Int> = arrayListOf(1,2,3,4,5)
+    val myArray:ArrayList<Int> = arrayListOf(1,2,3)
+//    val union = unionFun(urArray,myArray)
+//    println("Union size is = $union")
+//    val intersect = intersectFun(urArray,myArray)
+//    println(intersect)
+
+}
+
+
+// Union explain
+
+// Finding the Union of yourArray and myArray...
+// Here we're mainly creating a for loop for iterating the "myArray" because we are adding myArray's element to the last of the urArray
+// then after that all values of 2 array's are in the "urArray" array.
+// Now simply just use "distinct" method in the urArray.
+// It will automatically remove the duplicates digits in array..
+// We got the Union no. of "urArray" & "myArray" !!
+
+
+
+// Time Complexity : O(N)  || Depends on the Array Size
+// Space Complexity : O(1)  || Saving only once at a Time
+//fun unionFun(UrArray:ArrayList<Int>,myArray:ArrayList<Int>):Int{
+//    var urArray = UrArray
+//   for (i in 0..myArray.size-1)
+//       urArray.add(myArray[i])
+//
+//    urArray = urArray.distinct() as ArrayList<Int> // Storing only unique values ...
+//    return urArray.size
+//}
+
+
+// Intersection Explain
+
+// Intersection of 2 array will be only those common elements in the array
+// So to developing those we will firstly create a map
+// Now storing every variables of urArray to the map,
+// after that by checking of myArray's every value is in the map or not !
+// if that save that on the fList (new) List ..
+// returning the list is the end .....
+
+// Time Complexity : O(N)  || Depends on the Array Size
+// Space Complexity : O(N)  || Saving only once at a Time
+
+//fun intersectFun(UrArray:ArrayList<Int>,myArray:ArrayList<Int>): ArrayList<Int>? {
+//    var urArray = UrArray
+//    val urArrayMap = mutableMapOf<Int,Int>()
+//    var fList: ArrayList<Int> = arrayListOf()
+//
+//    for (i in 0..myArray.size - 1)
+//        urArrayMap.put(i, urArray[i])
+//
+//    for (j in 0..myArray.size - 1){
+//        if(urArrayMap.containsValue(myArray[j])){
+//            fList.add(myArray[j])
+//        }
+//    }
+//    return fList
+//}
