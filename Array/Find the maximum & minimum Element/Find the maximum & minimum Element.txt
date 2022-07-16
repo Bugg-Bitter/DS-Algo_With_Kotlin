@@ -21,7 +21,7 @@ fun maxEleArray(array: ArrayList<Int?>,size:Int): Int? {
     {
         if (array[i]!! > max!!){
             max = array[i]
-        }
+        } 
     }
     return max
 }
