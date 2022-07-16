@@ -1,0 +1,35 @@
+// Que: Move all the negative elements to one side of the array
+// Given Array : [3,-2,4,-5,1,6]
+// Ans : [-2,-5,3,4,1,6]
+
+fun main() {
+    val userArray:ArrayList<Int> = arrayListOf(3,-2,5,-4,1,6)
+    var ans = mvNegSide(userArray)
+    println(ans)
+}
+
+// We will apply partition Method .... (Quick Sort Partition Method)
+fun mvNegSide(array:ArrayList<Int>):ArrayList<Int>{
+    var pivot = -1
+    var tempList:ArrayList<Int> 
+    for (i in 0..array.size-1)
+    {
+        println(array)
+        if(array[i] <  0)
+        {
+            ++pivot
+            tempList = swap(array[i],array[pivot])
+            array[i] = tempList[0]
+            array[pivot] = tempList[1]
+        }
+    }
+    return array
+
+}
+
+fun swap(first:Int,sec:Int): ArrayList<Int> {
+    var changeableList:ArrayList<Int> = arrayListOf(0,0)
+    changeableList[0] = sec
+    changeableList[1] = first
+    return changeableList
+}
