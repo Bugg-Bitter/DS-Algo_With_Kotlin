@@ -15,4 +15,4 @@ fun main() {
 fun KthElement(userArray: ArrayList<Int>, target: Int): Int{
     userArray.sort()
     return userArray[target-1]
-}
+} 
