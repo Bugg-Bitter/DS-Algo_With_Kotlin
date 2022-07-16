@@ -23,7 +23,7 @@ fun rev(willChangeArrayList:java.util.ArrayList<Int?>,start:Int,end:Int): ArrayL
     
 
     var temp:Int
-    var Start= start
+    var Start= start 
     var End = end
     while (Start<End)
     {
