@@ -20,7 +20,7 @@ fun NFD(array:ArrayList<Int>):ArrayList<Int>{
         if (array[mid] == 0) {
             leftMidArray = swap(array[left] ,array[mid])
             array[left] = leftMidArray[0]
-            array[mid] = leftMidArray[1]
+            array[mid] = leftMidArray[1] 
             left++
             mid++
         }else if(array[mid] == 1){
