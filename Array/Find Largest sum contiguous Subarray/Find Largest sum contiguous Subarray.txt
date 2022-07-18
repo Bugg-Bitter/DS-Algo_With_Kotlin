@@ -1,0 +1,55 @@
+// Que: Find the largest subarray sum of the Entire Array
+// Given : [-2,2,5,-11,6]
+// Ans : 7 {2+5}
+
+fun main() {
+    val urArray: ArrayList<Int> = arrayListOf(-2,2,5,-11,6)
+//    val bruteForce = bruteForces(urArray)
+//    println(bruteForce)
+//    val kadensAns = kadanesAlgo(urArray)
+//    println(kadensAns)
+}
+
+/*
+    Here basically we have to find a sub array that's elements sum is maximum of any other subarray's sum...
+    So, we can solve this problem via 2 way...
+
+    1) BruteForce Method
+        Time : O(n^2)
+        Space : O(1)
+
+    2) kadens algorithm {Better Approach}
+        Time : O(n)
+        Space : O(1)
+ */
+
+
+
+//fun bruteForces(array:ArrayList<Int>):Int{
+//    var maxSum = 0
+//    var currentSum = 0
+//    for(i in 0 until (array.size-1)){
+//        for (j in i+1 until (array.size-1)){
+//            if ((array[i]+array[j]) > currentSum){
+//                currentSum = array[i] + array[j]
+//
+//            }
+//            if (currentSum > maxSum){
+//                maxSum = currentSum
+//            }
+//        }
+//    }
+//    return maxSum
+//}
+
+
+//fun kadanesAlgo(array:ArrayList<Int>):Int{
+//    var max = 0
+//    var cur = 0
+//    for (i in 0 until (array.size - 1)){
+//        cur += array[i]
+//        if (cur > max) max = cur
+//        if (cur < 0) cur=0
+//    }
+//    return max
+//}
